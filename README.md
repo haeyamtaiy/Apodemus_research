@@ -1,5 +1,5 @@
 # Apodemus_research
-Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-seq data
+Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-seq data                                         
 Programmes needed: Seqtk, blast+, bwa-mem, parallel (can all be installed using conda)
 
 # Map the sequences using BWA-mem against the draft Apodemus sylvaticus from ncbi (university of Liverpool, 498341) in order to obtain all the unmapped reads
