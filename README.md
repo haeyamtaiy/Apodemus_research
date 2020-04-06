@@ -2,7 +2,7 @@
 Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-seq data                                         
 Programmes needed: Seqtk, blast+, bwa-mem, parallel (can all be installed using conda)
 
-**Map the sequences using BWA-mem against the draft Apodemus sylvaticus from ncbi (university of Liverpool, 498341) in order to obtain all the unmapped reads**
+**Map the sequences using BWA-mem against the draft Apodemus sylvaticus from ncbi (university of Liverpool, 498341) in order to obtain all the unmapped reads**                                                                                               
 1a: index the reference sequence, obtained from ncbi 
 ```
 bwa index GCA_001305905.1_ASM130590v1_genomic.fna.gz
@@ -36,7 +36,7 @@ samtools fasta $a > unmapped_fa/$a.fa
 done
 ```
 
-**Blast the unmapped reads to the whole ncbi nt_v5 database**
+**Blast the unmapped reads to the whole ncbi nt_v5 database**                                                                    
 2a: blast all the unmapped reads on the cluster, need to copy all the input files and the nt_v5 database on the cluster 
 ```
 qsub orion_job.txt
