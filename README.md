@@ -8,7 +8,7 @@ Programmes needed: Seqtk, blast+, bwa-mem, parallel (can all be installed using 
 bwa index GCA_001305905.1_ASM130590v1_genomic.fna.gz
 ```
 
-1b: Map all sequences against the reference sequence 
+1b: Map all sequences against the reference genome and convert the files from sam to bam
 ```
 cd ~
 cd Research 
