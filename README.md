@@ -1,5 +1,6 @@
 # Apodemus_research
 Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-seq data
+# Programmes needed: Seqtk, blast+, bwa-mem, parallel (can all be installed using conda)
 
 # First step is to map the sequences using BWA-mem to an Apodemus mice sequence in order to obtain all the unmapped reads
 # 1a: index the reference sequence, obtained from ncbi 
