@@ -4,16 +4,16 @@ Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-s
 
 # First step is to map the sequences using BWA-mem to an Apodemus mice sequence in order to obtain all the unmapped reads
 # 1a: index the reference sequence, obtained from ncbi 
-bwa index GCA_001305905.1_ASM130590v1_genomic.fna.gz
+¢bwa index GCA_001305905.1_ASM130590v1_genomic.fna.gz
 
 # 1b: Map all sequences against the reference sequence 
-cd ~
-cd Research 
-cd 80_sequences_fq
-for a in *.fq.gz
-do
-bwa mem GCA_001305905.1_ASM130590v1_genomic.fna.gz $a | samtools sort -o /Volumes/HaeyamData/Mapping/output/$a.bam -
-done
+¢cd ~
+¢cd Research 
+¢cd 80_sequences_fq
+¢for a in *.fq.gz
+¢do
+¢bwa mem GCA_001305905.1_ASM130590v1_genomic.fna.gz $a | samtools sort -o /Volumes/HaeyamData/Mapping/output/$a.bam -
+¢done
 
 # 1c: filter out all the unmapped reads
 cd /Volumes/HaeyamData/Mapping/output
