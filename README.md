@@ -2,7 +2,24 @@
 Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-seq data                                         
 Programmes needed: Seqtk, blast+, bwa-mem, parallel (can all be installed using conda)
 
-**Map the sequences using BWA-mem against the draft Apodemus sylvaticus from ncbi (university of Liverpool, 498341) in order to obtain all the unmapped reads**                                                                                               
+# Obtaining the unmapped reads 
+
+Burrow Wheeler Alignmer (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.
+
+The latest version (0.7.17) can be installed through conda: https://anaconda.org/bioconda/bwa
+```
+conda install -c bioconda bwa 
+```
+**Documentation**
+
+Detailed documentation can be found at http://bio-bwa.sourceforge.net/bwa.shtml
+
+# BWA-mem analysis 
+
+We mapped the sequences using BWA-mem against the draft Apodemus sylvaticus from ncbi (university of Liverpool, 498341) 
+https://www.ncbi.nlm.nih.gov/assembly/GCA_001305905.1/
+
+in order to obtain all the unmapped reads                                                                                               
 1a: index the reference sequence, obtained from ncbi 
 ```
 bwa index GCA_001305905.1_ASM130590v1_genomic.fna.gz
