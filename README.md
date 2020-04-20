@@ -18,13 +18,12 @@ Detailed documentation can be found at http://bio-bwa.sourceforge.net/bwa.shtml
 
 We mapped the sequences using BWA-mem against the draft *Apodemus sylvaticus* from ncbi (university of Liverpool, 498341) 
 https://www.ncbi.nlm.nih.gov/assembly/GCA_001305905.1/
-
-in order to obtain all the unmapped reads                                                                                               
-**1a:** index the reference sequence ie the *Apodemus Sylvaticus* 
+                                                                                            
+**1a:** Before alignment, indexing is necessary therefore index the reference sequence ie the *Apodemus Sylvaticus* sequence downloaded from ncbi
 ```
 bwa index GCA_001305905.1_ASM130590v1_genomic.fna.gz
 ```
-This step will take a while and by the end there will be 5 output files: 
+This step will take a while and by the end there will be 5 output files which will be saved where the original reference sequence file is stored: 
 1. <reference_file_name>.fa.amb -> text file
 2. <reference_file_name>.fa.ann -> text file
 3. <reference_file_name>.fa.bwt -> binary file
@@ -45,17 +44,19 @@ conda install -c bioconda samtools
 **Documentation**
 
 Detailed documentation can be found at http://www.htslib.org/doc/samtools.html
+
+**Loop**
+The loop created combines both the alignment step and the conversion of the output sam files to bam files.   
+This is carried out in the folder which contains the input files to be alignmed as well as the index reference files and the output is directed to an output folder created
 ```
-cd ~
-cd Research 
-cd 80_sequences_fq
 for a in *.fq.gz
 do
 bwa mem GCA_001305905.1_ASM130590v1_genomic.fna.gz $a | samtools sort -o /Volumes/HaeyamData/Mapping/output/$a.bam -
 done
 ```
 
-1c: filter out all the unmapped reads
+**1c:** In our case we are only interested in the unmapped reads therefore we need to filter out all the mapped reads so we are left with only the unmapped. 
+The output files have the prefix "unmapped.bam" and are directed into another folder called <unmapped_bam> 
 ```
 cd /Volumes/HaeyamData/Mapping/output
 for a in *.fq.gz.bam
@@ -63,7 +64,7 @@ do
 samtools view -b -f 4 $a > unmapped_bam/$a.unmapped.bam
 done
 ```
-1d: convert all files to fasta 
+**1d:** These files are still in the bam format. This is a binary file (non-human readable) therefore, need to convert all the files to FASTA format. (text-based format for representing either nucleotide sequences or amino acid (protein) sequences). This step will also require samtools. 
 ```
 cd /Volumes/HaeyamData/Mapping/output/unmapped_bam
 for a in *.fq.gz.bam.unmapped.bam;
