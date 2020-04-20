@@ -20,7 +20,7 @@ conda install -c bioconda bwa
 ```
 **Documentation**
 
-Detailed documentation can be found at http://bio-bwa.sourceforge.net/bwa.shtml
+- Detailed documentation can be found at http://bio-bwa.sourceforge.net/bwa.shtml
 
 # BWA-mem analysis 
 
@@ -52,7 +52,7 @@ conda install -c bioconda samtools
 
 **Documentation**
 
-Detailed documentation can be found at http://www.htslib.org/doc/samtools.html
+- Detailed documentation can be found at http://www.htslib.org/doc/samtools.html
 
 **Loop**
 
@@ -86,7 +86,7 @@ done
 
 The NCBI provides a suite of command-line tools to run BLAST called BLAST+. This allows users to perform BLAST searches on their own server without size, volume and database restrictions. BLAST+ can be used with a command line so it can be integrated directly into your workflow.
 
-[Documentation and installation] (https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+- [Documentation and installation] (https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 
 **Blast the unmapped reads to the whole ncbi nt_v5 database**   
 
