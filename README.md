@@ -5,7 +5,7 @@ Programmes needed: bwa-mem, samtools, blast+, parallel (can all be installed usi
 **Overview**
 Step |Procedure | outputs
 ------------ | ------------ | -------------
-1 | ddRAD-seq | A.sylvaticus and A.flavicollis FASTQ files
+1 | ddRAD-seq | *A.sylvaticus* and *A.flavicollis* FASTQ files
 2 | BWA-mem & samtools | Unmapped reads 
 3 | BLAST+ 2.2.31+  | Blasted results
 
