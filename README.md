@@ -80,6 +80,7 @@ do
 samtools fasta $a > unmapped_fa/$a.fa
 done
 ```
+# BLAST+
 
 **Blast the unmapped reads to the whole ncbi nt_v5 database**                                                                    
 2a: blast all the unmapped reads on the cluster, need to copy all the input files and the nt_v5 database on the cluster 
