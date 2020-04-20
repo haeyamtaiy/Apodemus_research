@@ -42,6 +42,7 @@ This step will take a while and by the end there will be 5 output files which wi
 In order to convert the mapped output sam files (The Sequence Alignment/Map) to bam files (binary file version of the sam files) need to instal 'samtools'
 
 **Samtools** 
+
 Samtools is a set of utilities that manipulate alignments in the BAM format. It imports from and exports to the SAM (Sequence Alignment/Map) format, does sorting, merging and indexing, and allows to retrieve reads in any regions swiftly.
 
 The latest version (1.10) can be installed through conda: https://anaconda.org/bioconda/samtools
