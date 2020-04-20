@@ -103,8 +103,9 @@ nt_v5 database: This is a nucleotide database which can be obtained through the 
 This step was tested on a small subset of data with and without parallel and timed using the function 'time'
 - without parallel on 5 files: 49.965seconds
 - with parallel on same 5 files: 13.83seconds 
+Therefore, using parallel is much quicker and will speed up this step
 
-First need to copy all the input files and the nt_v5 database onto the hpc cluster
+First need to copy all the input files and the nt_v5 database onto the hpc cluster and then submit (qsub) the script.
 **Loop**
 
 ```
