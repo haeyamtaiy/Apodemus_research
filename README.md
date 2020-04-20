@@ -88,14 +88,31 @@ The NCBI provides a suite of command-line tools to run BLAST called BLAST+. This
 
 nt_v5 database: This is a nucleotide database which can be obtained through the [ncbi website](https://www.ncbi.nlm.nih.gov/books/NBK537770/)
 
-**2a:** blast all the unmapped reads on a high performance computer (hpc) as it requires high memory storage and RAM usage. 
+# GNU Parallel 
+
+GNU parallel is a shell tool for executing jobs in parallel using one or more computers. A job can be a single command or a small script that has to be run for each of the lines in the input. The typical input is a list of files, a list of hosts, a list of users, a list of URLs, or a list of tables. A job can also be a command that reads from a pipe. GNU parallel can then split the input and pipe it into commands in parallel
+
+- [Documentation]
+
+The latest version (20170422) can be installed through [conda](https://anaconda.org/bioconda/parallel)
+```
+conda install -c bioconda parallel 
+```
+
+**2a:** blast all the unmapped reads using parallel on a high performance computer (hpc) as it requires high memory storage and RAM usage. 
+
+This step was tested on a small subset of data with and without parallel and timed using the function 'time'
+- without parallel on 5 files: 49.965seconds
+- with parallel on same 5 files: 13.83seconds 
 
 First need to copy all the input files and the nt_v5 database onto the hpc cluster
+**Loop**
+
 ```
 qsub orion_job.txt 
 "ls *.txt |parallel -j 8 'blastn -task megablast -db ../blastdb_v5/nt_v5 -query {} -dust no -max_target_seqs 1 -perc_identity 75 qcov_hsp_perc 50 -outfmt "6 qseqid sseqid evalue pident stitle" -out output/{.}.txt'"
 ```
-This script contains specific paramaters: 
+This script contains specific paramaters in order to minimise the number of output files: 
 - pident set to only recover hits with percentage identity ≥75% 
 - hsp_coverage set to only recover hits with percentage coverage per hsp ≥ 50%. 
 
