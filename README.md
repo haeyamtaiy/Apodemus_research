@@ -24,7 +24,7 @@ conda install -c bioconda bwa
 
 # BWA-mem analysis 
 
-We mapped the sequences using BWA-mem against the draft *Apodemus sylvaticus* from ncbi [university of Liverpool, 498341] (https://www.ncbi.nlm.nih.gov/assembly/GCA_001305905.1/)
+We mapped the sequences using BWA-mem against the draft *Apodemus sylvaticus* from [ncbi university of Liverpool, 498341](https://www.ncbi.nlm.nih.gov/assembly/GCA_001305905.1/)
                                                                                             
 **1a:** Before alignment, indexing is necessary therefore index the reference sequence ie the *Apodemus Sylvaticus* sequence downloaded from ncbi
 ```
