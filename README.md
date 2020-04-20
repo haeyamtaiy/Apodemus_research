@@ -55,6 +55,7 @@ conda install -c bioconda samtools
 Detailed documentation can be found at http://www.htslib.org/doc/samtools.html
 
 **Loop**
+
 The loop created combines both the alignment step and the conversion of the output sam files to bam files.   
 This is carried out in the folder which contains the input files to be alignmed as well as the index reference files and the output is directed to an output folder created
 ```
