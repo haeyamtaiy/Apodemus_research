@@ -14,7 +14,7 @@ Step |Procedure | outputs
 
 Burrow Wheeler Alignmer (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.
 
-The latest version (0.7.17) can be installed through [conda] (https://anaconda.org/bioconda/bwa)
+The latest version (0.7.17) can be installed through [conda](https://anaconda.org/bioconda/bwa)
 ```
 conda install -c bioconda bwa 
 ```
@@ -24,8 +24,7 @@ conda install -c bioconda bwa
 
 # BWA-mem analysis 
 
-We mapped the sequences using BWA-mem against the draft *Apodemus sylvaticus* from ncbi [university of Liverpool, 498341] 
-(https://www.ncbi.nlm.nih.gov/assembly/GCA_001305905.1/)
+We mapped the sequences using BWA-mem against the draft *Apodemus sylvaticus* from ncbi [university of Liverpool, 498341] (https://www.ncbi.nlm.nih.gov/assembly/GCA_001305905.1/)
                                                                                             
 **1a:** Before alignment, indexing is necessary therefore index the reference sequence ie the *Apodemus Sylvaticus* sequence downloaded from ncbi
 ```
@@ -45,7 +44,7 @@ In order to convert the mapped output sam files (The Sequence Alignment/Map) to 
 
 Samtools is a set of utilities that manipulate alignments in the BAM format. It imports from and exports to the SAM (Sequence Alignment/Map) format, does sorting, merging and indexing, and allows to retrieve reads in any regions swiftly.
 
-The latest version (1.10) can be installed through [conda] (https://anaconda.org/bioconda/samtools)
+The latest version (1.10) can be installed through [conda](https://anaconda.org/bioconda/samtools)
 ```
 conda install -c bioconda samtools
 ```
@@ -86,11 +85,11 @@ done
 
 The NCBI provides a suite of command-line tools to run BLAST called BLAST+. This allows users to perform BLAST searches on their own server without size, volume and database restrictions. BLAST+ can be used with a command line so it can be integrated directly into your workflow.
 
-- [Documentation and installation] (https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+- [Documentation and installation](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 
 **Blast the unmapped reads to the whole ncbi nt_v5 database**   
 
-nt_v5 database: This is a nucleotide database which can be obtained through the [ncbi website] (https://www.ncbi.nlm.nih.gov/books/NBK537770/)
+nt_v5 database: This is a nucleotide database which can be obtained through the [ncbi website](https://www.ncbi.nlm.nih.gov/books/NBK537770/)
 
 **2a:** blast all the unmapped reads on a high performance computer (hpc) as it requires high memory storage and RAM usage. 
 
