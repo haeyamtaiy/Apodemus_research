@@ -88,7 +88,7 @@ The NCBI provides a suite of command-line tools to run BLAST called BLAST+. This
 
 GNU parallel is a shell tool for executing jobs in parallel using one or more computers. A job can be a single command or a small script that has to be run for each of the lines in the input. The typical input is a list of files, a list of hosts, a list of users, a list of URLs, or a list of tables. A job can also be a command that reads from a pipe. GNU parallel can then split the input and pipe it into commands in parallel
 
-- [Documentation]
+- [Documentation](https://www.gnu.org/software/parallel/)
 
 The latest version (20170422) can be installed through [conda](https://anaconda.org/bioconda/parallel)
 ```
