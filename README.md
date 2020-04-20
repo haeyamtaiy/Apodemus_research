@@ -14,7 +14,7 @@ Step |Procedure | outputs
 
 Burrow Wheeler Alignmer (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.
 
-The latest version (0.7.17) can be installed through conda: https://anaconda.org/bioconda/bwa
+The latest version (0.7.17) can be installed through [conda] https://anaconda.org/bioconda/bwa
 ```
 conda install -c bioconda bwa 
 ```
@@ -45,7 +45,7 @@ In order to convert the mapped output sam files (The Sequence Alignment/Map) to 
 
 Samtools is a set of utilities that manipulate alignments in the BAM format. It imports from and exports to the SAM (Sequence Alignment/Map) format, does sorting, merging and indexing, and allows to retrieve reads in any regions swiftly.
 
-The latest version (1.10) can be installed through conda: https://anaconda.org/bioconda/samtools
+The latest version (1.10) can be installed through [conda] https://anaconda.org/bioconda/samtools
 ```
 conda install -c bioconda samtools
 ```
@@ -86,11 +86,11 @@ done
 
 The NCBI provides a suite of command-line tools to run BLAST called BLAST+. This allows users to perform BLAST searches on their own server without size, volume and database restrictions. BLAST+ can be used with a command line so it can be integrated directly into your workflow.
 
-**Documentation and installation**: https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download
+[Documentation and installation] https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download
 
 **Blast the unmapped reads to the whole ncbi nt_v5 database**   
 
-nt_v5 database: This is a nucleotide database which can be obtained through : https://www.ncbi.nlm.nih.gov/books/NBK537770/
+nt_v5 database: This is a nucleotide database which can be obtained through the [ncbi website] https://www.ncbi.nlm.nih.gov/books/NBK537770/
 
 **2a:** blast all the unmapped reads on a high performance computer (hpc) as it requires high memory storage and RAM usage. 
 
@@ -99,5 +99,7 @@ First need to copy all the input files and the nt_v5 database onto the hpc clust
 qsub orion_job.txt 
 "ls *.txt |parallel -j 8 'blastn -task megablast -db ../blastdb_v5/nt_v5 -query {} -dust no -max_target_seqs 1 -perc_identity 75 qcov_hsp_perc 50 -outfmt "6 qseqid sseqid evalue pident stitle" -out output/{.}.txt'"
 ```
+This script contains specific paramaters: 
+
 **2b:** copy all outputs onto desktop using scp -r
 
