@@ -16,16 +16,35 @@ Detailed documentation can be found at http://bio-bwa.sourceforge.net/bwa.shtml
 
 # BWA-mem analysis 
 
-We mapped the sequences using BWA-mem against the draft Apodemus sylvaticus from ncbi (university of Liverpool, 498341) 
+We mapped the sequences using BWA-mem against the draft *Apodemus sylvaticus* from ncbi (university of Liverpool, 498341) 
 https://www.ncbi.nlm.nih.gov/assembly/GCA_001305905.1/
 
 in order to obtain all the unmapped reads                                                                                               
-1a: index the reference sequence, obtained from ncbi 
+**1a:** index the reference sequence ie the *Apodemus Sylvaticus* 
 ```
 bwa index GCA_001305905.1_ASM130590v1_genomic.fna.gz
 ```
+This step will take a while and by the end there will be 5 output files: 
+1. <reference_file_name>.fa.amb -> text file
+2. <reference_file_name>.fa.ann -> text file
+3. <reference_file_name>.fa.bwt -> binary file
+4. <reference_file_name>.fa.pac -> binary file
+5. <reference_file_name>.fa.sa -> binary file
 
-1b: Map all sequences against the reference genome and convert the files from sam to bam
+**1b:** Map all sequences against the reference genome and convert the files from sam to bam
+In order to convert the mapped output sam files (The Sequence Alignment/Map) to bam files (binary file version of the sam files) need to instal 'samtools'
+
+**Samtools** 
+Samtools is a set of utilities that manipulate alignments in the BAM format. It imports from and exports to the SAM (Sequence Alignment/Map) format, does sorting, merging and indexing, and allows to retrieve reads in any regions swiftly.
+
+The latest version (1.10) can be installed through conda: https://anaconda.org/bioconda/samtools
+```
+conda install -c bioconda samtools
+```
+
+**Documentation**
+
+Detailed documentation can be found at http://www.htslib.org/doc/samtools.html
 ```
 cd ~
 cd Research 
