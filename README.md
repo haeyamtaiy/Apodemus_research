@@ -14,13 +14,12 @@ Step |Procedure | outputs
 
 Burrow Wheeler Alignmer (BWA) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.
 
+- [Detailed documentation](http://bio-bwa.sourceforge.net/bwa.shtml)
+
 The latest version (0.7.17) can be installed through [conda](https://anaconda.org/bioconda/bwa)
 ```
 conda install -c bioconda bwa 
 ```
-**Documentation**
-
-- Detailed documentation can be found at http://bio-bwa.sourceforge.net/bwa.shtml
 
 # BWA-mem analysis 
 
@@ -44,14 +43,12 @@ In order to convert the mapped output sam files (The Sequence Alignment/Map) to 
 
 Samtools is a set of utilities that manipulate alignments in the BAM format. It imports from and exports to the SAM (Sequence Alignment/Map) format, does sorting, merging and indexing, and allows to retrieve reads in any regions swiftly.
 
+- [Detailed documentation](http://www.htslib.org/doc/samtools.html)
+
 The latest version (1.10) can be installed through [conda](https://anaconda.org/bioconda/samtools)
 ```
 conda install -c bioconda samtools
 ```
-
-**Documentation**
-
-- Detailed documentation can be found at http://www.htslib.org/doc/samtools.html
 
 **Loop**
 
