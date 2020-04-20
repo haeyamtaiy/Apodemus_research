@@ -1,6 +1,14 @@
 # Apodemus_research
 Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-seq data                                         
-Programmes needed: Seqtk, blast+, bwa-mem, parallel (can all be installed using conda)
+Programmes needed: bwa-mem, samtools, blast+, parallel (can all be installed using conda)
+
+**Overview**
+Procedure | outputs
+------------ | -------------
+ddRAD-seq | A.sylvaticus and A.flavicollis FASTQ files
+BWA-mem | Unmapped reads 
+BLAST+ 2.2.31+ | Blasted results
+
 
 # Obtaining the unmapped reads 
 
