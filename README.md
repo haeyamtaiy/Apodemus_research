@@ -1,4 +1,4 @@
-# Apodemus_research
+# Apodemus research
 Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-seq data                                         
 Programmes needed: bwa-mem, samtools, blast+, parallel (can all be installed using conda)
 
