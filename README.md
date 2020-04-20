@@ -106,6 +106,7 @@ This step was tested on a small subset of data with and without parallel and tim
 Therefore, using parallel is much quicker and will speed up this step
 
 First need to copy all the input files and the nt_v5 database onto the hpc cluster and then submit (qsub) the script.
+
 **Loop**
 
 ```
