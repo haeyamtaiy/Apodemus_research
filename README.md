@@ -41,7 +41,7 @@ This step will take a while and by the end there will be 5 output files which wi
 **1b:** Map all sequences against the reference genome and convert the files from sam to bam
 In order to convert the mapped output sam files (The Sequence Alignment/Map) to bam files (binary file version of the sam files) need to instal 'samtools'
 
-#Samtools 
+# Samtools 
 
 Samtools is a set of utilities that manipulate alignments in the BAM format. It imports from and exports to the SAM (Sequence Alignment/Map) format, does sorting, merging and indexing, and allows to retrieve reads in any regions swiftly.
 
