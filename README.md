@@ -100,6 +100,8 @@ qsub orion_job.txt
 "ls *.txt |parallel -j 8 'blastn -task megablast -db ../blastdb_v5/nt_v5 -query {} -dust no -max_target_seqs 1 -perc_identity 75 qcov_hsp_perc 50 -outfmt "6 qseqid sseqid evalue pident stitle" -out output/{.}.txt'"
 ```
 This script contains specific paramaters: 
+- pident set to only recover hits with percentage identity ≥75% 
+- hsp_coverage set to only recover hits with percentage coverage per hsp ≥ 50%. 
 
 **2b:** copy all outputs onto desktop using scp -r
 
