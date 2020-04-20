@@ -84,11 +84,20 @@ done
 ```
 # BLAST+
 
-**Blast the unmapped reads to the whole ncbi nt_v5 database**                                                                    
-2a: blast all the unmapped reads on the cluster, need to copy all the input files and the nt_v5 database on the cluster 
+The NCBI provides a suite of command-line tools to run BLAST called BLAST+. This allows users to perform BLAST searches on their own server without size, volume and database restrictions. BLAST+ can be used with a command line so it can be integrated directly into your workflow.
+
+**Documentation and installation**: https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download
+
+**Blast the unmapped reads to the whole ncbi nt_v5 database**   
+
+nt_v5 database: This is a nucleotide database which can be obtained through : https://www.ncbi.nlm.nih.gov/books/NBK537770/
+
+**2a:** blast all the unmapped reads on a high performance computer (hpc) as it requires high memory storage and RAM usage. 
+
+First need to copy all the input files and the nt_v5 database onto the hpc cluster
 ```
-qsub orion_job.txt
+qsub orion_job.txt 
 "ls *.txt |parallel -j 8 'blastn -task megablast -db ../blastdb_v5/nt_v5 -query {} -dust no -max_target_seqs 1 -perc_identity 75 qcov_hsp_perc 50 -outfmt "6 qseqid sseqid evalue pident stitle" -out output/{.}.txt'"
 ```
-2b: copy all outputs onto desktop
+**2b:** copy all outputs onto desktop using scp -r
 
