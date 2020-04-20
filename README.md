@@ -3,11 +3,11 @@ Analysing the carryover sequences of Apodemus mice sequences obtained from RAD-s
 Programmes needed: bwa-mem, samtools, blast+, parallel (can all be installed using conda)
 
 **Overview**
-Procedure | outputs
------------- | -------------
-ddRAD-seq  **-->**| A.sylvaticus and A.flavicollis FASTQ files
-BWA-mem  **->** | Unmapped reads 
-BLAST+ 2.2.31+  **-->** | Blasted results
+Step |Procedure | outputs
+------------ | ------------ | -------------
+1 | ddRAD-seq | A.sylvaticus and A.flavicollis FASTQ files
+2 | BWA-mem | Unmapped reads 
+3 | BLAST+ 2.2.31+  | Blasted results
 
 
 # Obtaining the unmapped reads 
