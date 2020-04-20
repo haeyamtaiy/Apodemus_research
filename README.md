@@ -94,7 +94,7 @@ The latest version (20170422) can be installed through [conda](https://anaconda.
 ```
 conda install -c bioconda parallel 
 ```
-### Blast the unmapped reads to the whole ncbi nt_v5 database using both blast+ and GNU parallel
+#### Blast the unmapped reads against the whole ncbi nt_v5 database using both blast+ and GNU parallel
 
 nt_v5 database: This is a nucleotide database which can be obtained through the [ncbi website](https://www.ncbi.nlm.nih.gov/books/NBK537770/)
 
