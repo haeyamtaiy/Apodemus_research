@@ -61,7 +61,8 @@ bwa mem GCA_001305905.1_ASM130590v1_genomic.fna.gz $a | samtools sort -o /Volume
 done
 ```
 
-**1c:** In our case we are only interested in the unmapped reads therefore we need to filter out all the mapped reads so we are left with only the unmapped. 
+### 1c
+In our case we are only interested in the unmapped reads therefore we need to filter out all the mapped reads so we are left with only the unmapped. 
 The output files have the prefix "unmapped.bam" and are directed into another folder called <unmapped_bam> 
 ```
 cd /Volumes/HaeyamData/Mapping/output
