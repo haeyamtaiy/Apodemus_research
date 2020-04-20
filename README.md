@@ -84,10 +84,6 @@ The NCBI provides a suite of command-line tools to run BLAST called BLAST+. This
 
 - [Documentation and installation](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 
-**Blast the unmapped reads to the whole ncbi nt_v5 database**   
-
-nt_v5 database: This is a nucleotide database which can be obtained through the [ncbi website](https://www.ncbi.nlm.nih.gov/books/NBK537770/)
-
 # GNU Parallel 
 
 GNU parallel is a shell tool for executing jobs in parallel using one or more computers. A job can be a single command or a small script that has to be run for each of the lines in the input. The typical input is a list of files, a list of hosts, a list of users, a list of URLs, or a list of tables. A job can also be a command that reads from a pipe. GNU parallel can then split the input and pipe it into commands in parallel
@@ -98,6 +94,9 @@ The latest version (20170422) can be installed through [conda](https://anaconda.
 ```
 conda install -c bioconda parallel 
 ```
+### Blast the unmapped reads to the whole ncbi nt_v5 database using both blast+ and GNU parallel
+
+nt_v5 database: This is a nucleotide database which can be obtained through the [ncbi website](https://www.ncbi.nlm.nih.gov/books/NBK537770/)
 
 **2a:** blast all the unmapped reads using parallel on a high performance computer (hpc) as it requires high memory storage and RAM usage. 
 
